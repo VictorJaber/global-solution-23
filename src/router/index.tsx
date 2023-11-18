@@ -1,11 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { Layout } from '../components/Layout';
-import { Page1 } from '../pages/Page1';
-import { Home } from '../pages/Home';
-import { Page2 } from '../pages/Page2';
-import { Page3 } from '../pages/Page3';
-import { Page4 } from '../pages/Page4';
+import { Layout } from '@components/Layout';
+import { Home } from '@pages/Home';
+import { Page1 } from '@pages/Page1';
+import { Page2 } from '@pages/Page2';
+import { Page3 } from '@pages/Page3';
+import { Page4 } from '@pages/Page4';
 
 const router = createBrowserRouter([
   {
