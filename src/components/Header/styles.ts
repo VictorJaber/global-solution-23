@@ -6,6 +6,7 @@ export const StyledHeader = styled.header`
   align-items: center;
   position: sticky;
   top: 0;
+  z-index: 1;
   background-color: ${({ theme }) => theme.colors.primary.main};
 `;
 

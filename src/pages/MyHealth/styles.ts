@@ -2,14 +2,22 @@ import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 1fr;
+  gap: 24px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}px) {
+    grid-template-columns: 2fr 3fr;
+  }
 `;
 
 export const SummaryCard = styled.div`
   border-radius: 12px;
   background-color: ${({ theme }) => theme.colors.grey[50]};
   position: relative;
-  height: 440px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}px) {
+    height: 440px;
+  }
 `;
 
 export const SummaryHeader = styled.div`
@@ -59,9 +67,14 @@ export const SummarySubtitle = styled.p`
 
 export const TasksCardsWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  width: -webkit-fill-available;
+  grid-template-columns: 1fr;
   gap: 8px;
   padding: 16px;
-  position: absolute;
-  top: 25%;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}px) {
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    top: 25%;
+  }
 `;

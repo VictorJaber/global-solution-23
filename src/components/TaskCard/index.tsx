@@ -1,17 +1,17 @@
+import { useTheme } from 'styled-components';
 import {
   FontAwesomeIcon,
   FontAwesomeIconProps,
 } from '@fortawesome/react-fontawesome';
-
-import { Container, IconButton, Subtitle, Title, TitleWrapper } from './styles';
+import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus';
 import {
   faDroplet,
   faUtensils,
   faSun,
   faShoePrints,
 } from '@fortawesome/free-solid-svg-icons';
-import { useTheme } from 'styled-components';
-import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus';
+
+import { Container, IconButton, Subtitle, Title, TitleWrapper } from './styles';
 import { TaskVariant } from '@/pages/MyHealth';
 
 type TaskCardProps = {
