@@ -59,7 +59,7 @@ declare module 'styled-components' {
         hover: string;
         disabled: string;
         disabledBackground: string;
-        disabledOpacity: string;
+        disabledOpacity: number;
       };
       shadow: {
         1: string;

@@ -10,10 +10,22 @@ export const Container = styled.div`
   }
 `;
 
+export const flipInVerRight = keyframes`
+  0% {
+    transform: rotateY(-90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0);
+    opacity: 1;
+  }`;
+
 export const SummaryCard = styled.div`
   border-radius: 12px;
   background-color: ${({ theme }) => theme.colors.grey[50]};
   position: relative;
+  box-shadow: ${({ theme }) => theme.colors.shadow[1]};
+  animation: ${flipInVerRight} 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}px) {
     height: 440px;

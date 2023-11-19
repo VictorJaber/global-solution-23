@@ -32,4 +32,9 @@ export const IconButton = styled.button`
   &:hover {
     background-color: ${({ theme }) => theme.colors.action.hover};
   }
+
+  &:disabled {
+    opacity: 0;
+    visibility: hidden;
+  }
 `;

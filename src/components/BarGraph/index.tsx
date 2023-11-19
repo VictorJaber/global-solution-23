@@ -1,4 +1,5 @@
 import Chart from 'react-apexcharts';
+import { GraphContainer } from './styles';
 
 const CHART_DATA = {
   options: {
@@ -45,11 +46,13 @@ const CHART_DATA = {
 
 export function BarGraph() {
   return (
-    <Chart
-      options={CHART_DATA.options}
-      series={CHART_DATA.series}
-      type="bar"
-      height="450"
-    />
+    <GraphContainer>
+      <Chart
+        options={CHART_DATA.options}
+        series={CHART_DATA.series}
+        type="bar"
+        height="450"
+      />
+    </GraphContainer>
   );
 }

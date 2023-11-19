@@ -66,8 +66,8 @@ export function TaskCard({
           color={MAP_ICONS[type].iconColor}
           size="lg"
         />
-        {type !== 'steps' && !isCompleted && (
-          <IconButton onClick={onClick}>
+        {type !== 'steps' && (
+          <IconButton onClick={onClick} disabled={isCompleted}>
             <FontAwesomeIcon
               icon={faPlus}
               color={colors.action.active}
