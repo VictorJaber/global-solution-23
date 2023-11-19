@@ -5,7 +5,7 @@ export const StyledButton = styled.button`
   overflow: hidden;
   transition: background 400ms;
   color: #fff;
-  background-color: ${({ theme }) => theme.colors.black};
+  background-color: ${({ theme }) => theme.colors.primary.light};
   padding: 1rem 2rem;
   font-size: 1rem;
   outline: 0;

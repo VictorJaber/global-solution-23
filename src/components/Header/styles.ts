@@ -6,7 +6,7 @@ export const StyledHeader = styled.header`
   align-items: center;
   position: sticky;
   top: 0;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.primary.main};
 `;
 
 export const Logo = styled.img`
@@ -32,12 +32,12 @@ export const StyledNav = styled.nav`
 
   & a.active {
     color: ${({ theme }) => theme.colors.primary};
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.common.white};
   }
 `;
 
 export const Button = styled.button`
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.common.white};
   color: #00a1ff;
   border: none;
   padding: 1em 2em;

@@ -1,4 +1,4 @@
-import { createRipple } from '@utils/rippleEffect';
+import { createRipple } from '@/utils/createRipple';
 
 import { StyledButton } from './styles';
 
