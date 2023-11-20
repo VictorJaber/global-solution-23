@@ -4,8 +4,8 @@ export const StyledButton = styled.button`
   position: relative;
   overflow: hidden;
   transition: background 400ms;
-  color: #fff;
-  background-color: ${({ theme }) => theme.colors.black};
+  color: black;
+  background-color: white;
   padding: 1rem 2rem;
   font-size: 1rem;
   outline: 0;

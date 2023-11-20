@@ -10,7 +10,7 @@ export const StyledHeader = styled.header`
 `;
 
 export const Logo = styled.img`
-  max-width: 150px;
+  max-width: 100px;
   display: block;
 `;
 
@@ -24,6 +24,7 @@ export const StyledNav = styled.nav`
     padding: 0.5em 1em;
     text-transform: uppercase;
     font-weight: 700;
+    color: white;
   }
 
   & a:hover {

@@ -6,6 +6,7 @@ const Container = styled.div`
   justify-content: center;
   max-width: 1280px;
   margin: 0 auto;
+  margin-top: 40px;
 `;
 
 const Form = styled.div`
@@ -13,7 +14,7 @@ const Form = styled.div`
   background-color: #D9D9D9;
   text-align: left;
   width: 30%;
-  margin-right: 10%;
+  margin-right: 20%;
   border-radius: 15px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 `;
@@ -69,13 +70,16 @@ const Boxes = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 50%;
+  width: 40%;
+
 `;
 
 const Box = styled.div`
   height: 100px;
   margin-bottom: 10px;
-  background-color: grey;
+  border-radius: 8px;
+  background-color: #D9D9D9;
+  padding: 10px 80px;
 `;
 
 const Button = styled.button`
@@ -420,10 +424,10 @@ export function Home() {
         </form>
       </Form>
       <Boxes>
-        <Box>Conteúdo da primeira caixa</Box>
-        <Box>Conteúdo da segunda caixa</Box>
-        <Box>Conteúdo da terceira caixa</Box>
-        <Box>Conteúdo da quarta caixa</Box>
+        <Box>Página 1</Box>
+        <Box>Página 2</Box>
+        <Box>Página 3</Box>
+        <Box>Página 4</Box>
       </Boxes>
     </Container>
   );
