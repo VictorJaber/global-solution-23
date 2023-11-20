@@ -16,6 +16,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAward } from '@fortawesome/free-solid-svg-icons/faAward';
 import { BarGraph } from '@/components/BarGraph';
+import { MoodCard } from '@/components/MoodCard';
 
 export type TaskVariant = 'water' | 'food' | 'outdoor' | 'steps';
 
@@ -107,6 +108,7 @@ export function MyHealth() {
         </TasksCardsWrapper>
       </SummaryCard>
       <BarGraph />
+      <MoodCard />
     </Container>
   );
 }
