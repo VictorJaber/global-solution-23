@@ -14,7 +14,9 @@ export function Header() {
         <NavLink to="/page-3">Page 3</NavLink>
         <NavLink to="/minha-saude">Minha saúde</NavLink>
       </StyledNav>
-      <Button>Saiba mais</Button>
+      <Button size="lg" variant="outlined">
+        Saiba mais
+      </Button>
     </StyledHeader>
   );
 }
