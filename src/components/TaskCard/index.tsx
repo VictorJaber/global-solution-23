@@ -12,7 +12,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import { Container, IconButton, Subtitle, Title, TitleWrapper } from './styles';
-import { TaskVariant } from '@/pages/MyHealth';
+import { TaskVariant } from '../Summary';
 
 type TaskCardProps = {
   iconProps?: FontAwesomeIconProps;

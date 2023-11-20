@@ -1,7 +1,19 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled, { keyframes } from 'styled-components';
 
+const tiltFromLeft = keyframes`
+ 0% {
+    transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+`;
+
 export const MoodCardContainer = styled.div`
+  animation: ${tiltFromLeft} 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   border-radius: 8px;
   background-color: ${({ theme }) => theme.colors.grey[50]};
   padding: 24px;
