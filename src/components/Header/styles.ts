@@ -11,7 +11,7 @@ export const StyledHeader = styled.header`
 `;
 
 export const Logo = styled.img`
-  max-width: 150px;
+  max-width: 100px;
   display: block;
 `;
 
