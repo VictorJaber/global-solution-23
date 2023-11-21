@@ -22,6 +22,12 @@ export const StyledButton = styled.button<Props>`
   cursor: pointer;
   font-weight: 700;
 
+  &:disabled {
+    color: ${({ theme }) => theme.colors.action.disabled};
+    background-color: ${({ theme }) => theme.colors.action.disabledBackground};
+    box-shadow: none;
+  }
+
   ${({ $size }) =>
     $size === 'sm' &&
     css`

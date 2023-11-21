@@ -12,7 +12,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import { Container, IconButton, Subtitle, Title, TitleWrapper } from './styles';
-import { TaskVariant } from '../Summary';
+import { TaskVariant } from '@/contexts/TasksProvider';
 
 type TaskCardProps = {
   iconProps?: FontAwesomeIconProps;
@@ -66,15 +66,13 @@ export function TaskCard({
           color={MAP_ICONS[type].iconColor}
           size="lg"
         />
-        {type !== 'steps' && (
-          <IconButton onClick={onClick} disabled={isCompleted}>
-            <FontAwesomeIcon
-              icon={faPlus}
-              color={colors.action.active}
-              size="lg"
-            />
-          </IconButton>
-        )}
+        <IconButton onClick={onClick} disabled={isCompleted}>
+          <FontAwesomeIcon
+            icon={faPlus}
+            color={colors.action.active}
+            size="lg"
+          />
+        </IconButton>
       </TitleWrapper>
       <Title>{title}</Title>
       <Subtitle>{MAP_SUBTITLES[type]}</Subtitle>

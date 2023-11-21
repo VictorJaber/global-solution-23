@@ -1,4 +1,5 @@
 import Chart from 'react-apexcharts';
+
 import { GraphContainer } from './styles';
 
 const CHART_DATA = {

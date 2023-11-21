@@ -29,14 +29,31 @@ export const SummaryHeader = styled.div`
   border-radius: 12px;
 `;
 
-export const SummaryTitleWrapper = styled.div`
+export const SummaryTitleContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 
+export const SummaryTitleWrapper = styled.div`
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+`;
+
 export const SummaryTitle = styled.h1`
   margin-bottom: 8px;
+`;
+
+export const SummarySubtitle = styled.p`
+  font-size: 0.875rem;
+  opacity: 0.8;
+
+  span {
+    font-weight: 700;
+    text-decoration: underline;
+  }
 `;
 
 const swirlInBck = keyframes`
@@ -55,16 +72,6 @@ export const IconContainer = styled.div`
   position: absolute;
   top: 16px;
   right: 16px;
-`;
-
-export const SummarySubtitle = styled.p`
-  font-size: 0.875rem;
-  opacity: 0.8;
-
-  span {
-    font-weight: 700;
-    text-decoration: underline;
-  }
 `;
 
 export const TasksCardsWrapper = styled.div`

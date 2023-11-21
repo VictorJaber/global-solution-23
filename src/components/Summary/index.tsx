@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { faAward } from '@fortawesome/free-solid-svg-icons';
+import { faAward, faPencil } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useTheme } from 'styled-components';
 
 import { TaskCard } from '../TaskCard';
 import {
@@ -11,65 +11,36 @@ import {
   IconContainer,
   SummarySubtitle,
   TasksCardsWrapper,
+  SummaryTitleContainer,
 } from './styles';
-import { useTheme } from 'styled-components';
-
-export type TaskVariant = 'water' | 'food' | 'outdoor' | 'steps';
-
-type Task = {
-  goal: number;
-  current: number;
-  type: TaskVariant;
-};
+import { useTasks } from '@/hooks/useTasks';
 
 export function Summary() {
   const { colors } = useTheme();
-  const [tasksState, setTasksState] = useState<Task[]>([
-    {
-      goal: 7,
-      current: 1,
-      type: 'water',
-    },
-    {
-      goal: 4,
-      current: 2,
-      type: 'food',
-    },
-    {
-      goal: 2,
-      current: 1,
-      type: 'outdoor',
-    },
-    {
-      goal: 2500,
-      current: 2500,
-      type: 'steps',
-    },
-  ]);
 
-  const uncompletedTasks = tasksState.filter(
-    (task) => task.current !== task.goal
-  );
-  const alltasksDone = uncompletedTasks.length === 0;
-
-  function handleUpdateTask(taskType: TaskVariant) {
-    setTasksState((prevValue) => {
-      return prevValue.map((task) => {
-        if (task.type === taskType && task.current < task.goal) {
-          return { ...task, current: task.current + 1 };
-        } else {
-          return task;
-        }
-      });
-    });
-  }
+  const {
+    allTasksDone,
+    handleUpdateTask,
+    uncompletedTasks,
+    tasks,
+    setEditGoalsOpen,
+  } = useTasks();
 
   return (
     <SummaryCard>
       <SummaryHeader>
-        <SummaryTitleWrapper>
-          <SummaryTitle>Minhas metas</SummaryTitle>
-          {alltasksDone && (
+        <SummaryTitleContainer>
+          <SummaryTitleWrapper>
+            <SummaryTitle>Minhas metas</SummaryTitle>
+            <FontAwesomeIcon
+              onClick={() => setEditGoalsOpen(true)}
+              cursor="pointer"
+              icon={faPencil}
+              color={colors.common.white}
+              size="xl"
+            />
+          </SummaryTitleWrapper>
+          {allTasksDone && (
             <IconContainer>
               <FontAwesomeIcon
                 icon={faAward}
@@ -78,8 +49,8 @@ export function Summary() {
               />
             </IconContainer>
           )}
-        </SummaryTitleWrapper>
-        {alltasksDone ? (
+        </SummaryTitleContainer>
+        {allTasksDone ? (
           <SummarySubtitle>
             Parabéns! Você concluiu todas as suas metas!
           </SummarySubtitle>
@@ -91,7 +62,7 @@ export function Summary() {
         )}
       </SummaryHeader>
       <TasksCardsWrapper>
-        {tasksState.map((task) => (
+        {tasks.map((task) => (
           <TaskCard
             isCompleted={task.current === task.goal}
             key={task.type}

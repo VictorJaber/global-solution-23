@@ -22,8 +22,9 @@ export const TitleWrapper = styled.div`
 `;
 
 export const IconButton = styled.button`
-  padding: 8px;
   border-radius: 50%;
+  width: 40px;
+  height: 40px;
   border: none;
   background-color: ${({ theme }) => theme.colors.action.disabledBackground};
   cursor: pointer;
