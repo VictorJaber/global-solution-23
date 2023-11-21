@@ -7,6 +7,9 @@ const GlobalStyle = createGlobalStyle({
     boxSizing: 'border-box',
     fontFamily: 'Roboto',
   },
+  'h1,h2,h3,h4,h5,h6,span,p,ul': {
+    margin: 0,
+  },
   a: {
     textDecoration: 'none',
     color: 'inherit',

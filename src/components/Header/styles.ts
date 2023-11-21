@@ -6,7 +6,8 @@ export const StyledHeader = styled.header`
   align-items: center;
   position: sticky;
   top: 0;
-  background-color: ${({ theme }) => theme.colors.primary};
+  z-index: 1;
+  background-color: ${({ theme }) => theme.colors.primary.main};
 `;
 
 export const Logo = styled.img`
@@ -24,7 +25,6 @@ export const StyledNav = styled.nav`
     padding: 0.5em 1em;
     text-transform: uppercase;
     font-weight: 700;
-    color: white;
   }
 
   & a:hover {
@@ -33,20 +33,6 @@ export const StyledNav = styled.nav`
 
   & a.active {
     color: ${({ theme }) => theme.colors.primary};
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.common.white};
   }
-`;
-
-export const Button = styled.button`
-  background-color: ${({ theme }) => theme.colors.white};
-  color: #00a1ff;
-  border: none;
-  padding: 1em 2em;
-  border-radius: 8px;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: 700;
-  transition: transform 0.2s ease-in;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px,
-    rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
 `;

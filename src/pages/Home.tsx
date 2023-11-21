@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -11,7 +10,7 @@ const Container = styled.div`
 
 const Form = styled.div`
   padding: 20px;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   text-align: left;
   width: 30%;
   margin-right: 20%;
@@ -52,7 +51,7 @@ const InputGroup = styled.div`
   textarea:focus,
   textarea:active {
     outline: none;
-    border-color: #0E79B2;
+    border-color: #0e79b2;
     transition: border-color 0.3s ease-in-out;
   }
 `;
@@ -71,21 +70,20 @@ const Boxes = styled.div`
   flex-direction: column;
   text-align: center;
   width: 40%;
-
 `;
 
 const Box = styled.div`
   height: 100px;
   margin-bottom: 10px;
   border-radius: 8px;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   padding: 10px 80px;
 `;
 
 const Button = styled.button`
   padding: 10px 20px;
   border-radius: 4px;
-  background-color: #0E79B2;
+  background-color: #0e79b2;
   color: white;
   border: none;
   cursor: pointer;
@@ -223,7 +221,7 @@ const cidadesBrasil = [
   'Cachoeirinha',
   'Luziânia',
   'Dourados',
-  'Santa Bárbara d\'Oeste',
+  "Santa Bárbara d'Oeste",
   'Araras',
   'Garanhuns',
   'Barra Mansa',
@@ -382,9 +380,7 @@ const TitleForm = styled.h2`
   text-align: center;
   margin-bottom: 30px;
   font-weight: normal;
-
-`
-
+`;
 
 export function Home() {
   return (
@@ -418,7 +414,12 @@ export function Home() {
           </InputGroup>
           <InputGroup>
             <label htmlFor="description">Descrição do Assunto</label>
-            <textarea id="description" name="description" rows="4" cols="50"></textarea>
+            <textarea
+              id="description"
+              name="description"
+              rows={4}
+              cols={50}
+            ></textarea>
           </InputGroup>
           <Button type="submit">Enviar</Button>
         </form>
