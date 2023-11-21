@@ -8,9 +8,11 @@ export const CarrouselTitle = styled.h2`
 export const NewsInfo = styled.div`
   color: ${({ theme }) => theme.colors.common.white};
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 16px 16px 32px;
+  padding: 16px 16px 48px;
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
   transform: translateY(100%);
   opacity: 0;
   transition: transform 0.3s ease-in-out;
