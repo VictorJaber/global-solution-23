@@ -8,9 +8,4 @@ export const Container = styled.div`
   main {
     padding: 32px;
   }
-
-  footer {
-    background-color: #ddd;
-    padding: 32px;
-  }
 `;
