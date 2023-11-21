@@ -36,17 +36,3 @@ export const StyledNav = styled.nav`
     background-color: ${({ theme }) => theme.colors.common.white};
   }
 `;
-
-export const Button = styled.button`
-  background-color: ${({ theme }) => theme.colors.common.white};
-  color: #00a1ff;
-  border: none;
-  padding: 1em 2em;
-  border-radius: 8px;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: 700;
-  transition: transform 0.2s ease-in;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px,
-    rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
-`;
