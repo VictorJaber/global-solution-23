@@ -1,83 +1,6 @@
-import styled from 'styled-components';
 import {Button} from "@components/Button";
 import {HomeCard} from "@components/HomeCard";
-
-
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  max-width: 1280px;
-  margin: 0 auto;
-  margin-top: 40px;
-`;
-
-const Form = styled.div`
-  padding: 20px;
-  background-color: #1976d2;
-  text-align: left;
-  width: 520px;
-  margin-right: 20%;
-  border-radius: 15px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  color: white;
-`;
-
-const InputGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-
-  label {
-    margin-bottom: 5px;
-    font-size: 14px;
-  }
-
-  select,
-  input,
-  textarea {
-    width: 100%;
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-size: 14px;
-    transition: border-color 0.3s ease-in-out;
-  }
-
-  textarea {
-    resize: none;
-  }
-
-  select:focus,
-  select:active,
-  input:focus,
-  input:active,
-  textarea:focus,
-  textarea:active {
-    outline: none;
-    border-color: #0e79b2;
-    transition: border-color 0.3s ease-in-out;
-  }
-`;
-
-const RowInputGroup = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  ${InputGroup} {
-    width: 48%;
-  }
-`;
-
-const Boxes = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 40%;
-`;
-
-
+import {Container, Form, TitleForm, RowInputGroup, InputGroup, Boxes} from "@pages/Home/styles.ts";
 const cidadesBrasil = [
   'São Paulo',
   'Rio de Janeiro',
@@ -359,17 +282,12 @@ const cidadesBrasil = [
   'Poços de Caldas',
 ];
 
-const TitleForm = styled.h2`
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: normal;
-`;
+
 
 export function Home() {
   return (
     <Container>
-      <Form>
+      <Form >
         <form>
           <TitleForm>Fale Conosco</TitleForm>
           <RowInputGroup>

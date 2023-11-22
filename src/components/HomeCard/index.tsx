@@ -6,6 +6,6 @@ interface HomeCardProps {
 }
 export function HomeCard ({path, imgUrl}:HomeCardProps){
     return (
-        <StyledCard to = {path} imgUrl = {imgUrl}/>
+        <StyledCard to = {path} $imgUrl = {imgUrl}/>
     )
 }
