@@ -1,4 +1,8 @@
 import styled from 'styled-components';
+import { MagicMotion } from "react-magic-motion";
+import {Button} from "@components/Button";
+
+
 
 const Container = styled.div`
   display: flex;
@@ -10,12 +14,13 @@ const Container = styled.div`
 
 const Form = styled.div`
   padding: 20px;
-  background-color: #d9d9d9;
+  background-color: #1976d2;
   text-align: left;
-  width: 30%;
+  width: 520px;
   margin-right: 20%;
   border-radius: 15px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  color: white;
 `;
 
 const InputGroup = styled.div`
@@ -72,27 +77,59 @@ const Boxes = styled.div`
   width: 40%;
 `;
 
-const Box = styled.div`
-  height: 100px;
+const Box1 = styled.div`
+  height: 129px;
   margin-bottom: 10px;
   border-radius: 8px;
-  background-color: #d9d9d9;
   padding: 10px 80px;
-`;
-
-const Button = styled.button`
-  padding: 10px 20px;
-  border-radius: 4px;
-  background-color: #0e79b2;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  background-image: url("../../public/1.png");
+  transition: transform 0.3s ease-in-out; /* Adicionando uma transição suave */
 
   &:hover {
-    background-color: #085a8c;
+    transform: scale(1.05); /* Zoom de 10% */
   }
 `;
+
+const Box2 = styled.div`
+  height: 129px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 10px 80px;
+  background-image: url("../../public/2.png");
+  transition: transform 0.3s ease-in-out; /* Adicionando uma transição suave */
+
+  &:hover {
+    transform: scale(1.05); /* Zoom de 10% */
+  }
+`;
+
+const Box3 = styled.div`
+  height: 129px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 10px 80px;
+  background-image: url("../../public/3.png");
+  transition: transform 0.3s ease-in-out; /* Adicionando uma transição suave */
+
+  &:hover {
+    transform: scale(1.05); /* Zoom de 10% */
+  }
+`;
+
+const Box4 = styled.div`
+  height: 129px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 10px 80px;
+  background-image: url("../../public/4.png");
+  transition: transform 0.3s ease-in-out; /* Adicionando uma transição suave */
+
+  &:hover {
+    transform: scale(1.05); /* Zoom de 10% */
+  }
+`;
+
+
 
 const cidadesBrasil = [
   'São Paulo',
@@ -394,7 +431,7 @@ export function Home() {
               <input type="text" id="fullName" name="fullName" />
             </InputGroup>
             <InputGroup>
-              <label htmlFor="city">Cidade</label>
+              <MagicMotion><label htmlFor="city">Cidade</label></MagicMotion>
               <select id="city" name="city">
                 {cidadesBrasil.map((cidade, index) => (
                   <option key={index} value={cidade}>
@@ -421,14 +458,14 @@ export function Home() {
               cols={50}
             ></textarea>
           </InputGroup>
-          <Button type="submit">Enviar</Button>
+          <Button customColor={"white"} >Enviar</Button>
         </form>
       </Form>
       <Boxes>
-        <Box>Página 1</Box>
-        <Box>Página 2</Box>
-        <Box>Página 3</Box>
-        <Box>Página 4</Box>
+        <Box1/>
+        <Box2/>
+        <Box3/>
+        <Box4/>
       </Boxes>
     </Container>
   );
