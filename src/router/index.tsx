@@ -3,7 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import { Layout } from '@components/Layout';
 import { Home } from '@pages/Home';
 import { Page1 } from '@pages/Page1';
-import { Page2 } from '@pages/Page2';
+import { Doenca } from '@/pages/Doenca';
 import { Page3 } from '@pages/Page3';
 import { MyHealth } from '@/pages/MyHealth';
 
@@ -20,8 +20,8 @@ const router = createBrowserRouter([
         element: <Page1 />,
       },
       {
-        path: '/page-2',
-        element: <Page2 />,
+        path: '/doencas',
+        element: <Doenca />,
       },
       {
         path: '/page-3',

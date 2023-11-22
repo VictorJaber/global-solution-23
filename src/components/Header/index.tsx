@@ -10,7 +10,7 @@ export function Header() {
       <StyledNav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/page-1">Page 1</NavLink>
-        <NavLink to="/page-2">Page 2</NavLink>
+        <NavLink to="/doencas">Doenças Transmissiveis</NavLink>
         <NavLink to="/page-3">Page 3</NavLink>
         <NavLink to="/minha-saude">Minha saúde</NavLink>
       </StyledNav>
