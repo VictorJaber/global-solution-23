@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { MagicMotion } from "react-magic-motion";
 import {Button} from "@components/Button";
+import {HomeCard} from "@components/HomeCard";
 
 
 
@@ -76,59 +76,6 @@ const Boxes = styled.div`
   text-align: center;
   width: 40%;
 `;
-
-const Box1 = styled.div`
-  height: 129px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  padding: 10px 80px;
-  background-image: url("../../public/1.png");
-  transition: transform 0.3s ease-in-out; /* Adicionando uma transição suave */
-
-  &:hover {
-    transform: scale(1.05); /* Zoom de 10% */
-  }
-`;
-
-const Box2 = styled.div`
-  height: 129px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  padding: 10px 80px;
-  background-image: url("../../public/2.png");
-  transition: transform 0.3s ease-in-out; /* Adicionando uma transição suave */
-
-  &:hover {
-    transform: scale(1.05); /* Zoom de 10% */
-  }
-`;
-
-const Box3 = styled.div`
-  height: 129px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  padding: 10px 80px;
-  background-image: url("../../public/3.png");
-  transition: transform 0.3s ease-in-out; /* Adicionando uma transição suave */
-
-  &:hover {
-    transform: scale(1.05); /* Zoom de 10% */
-  }
-`;
-
-const Box4 = styled.div`
-  height: 129px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  padding: 10px 80px;
-  background-image: url("../../public/4.png");
-  transition: transform 0.3s ease-in-out; /* Adicionando uma transição suave */
-
-  &:hover {
-    transform: scale(1.05); /* Zoom de 10% */
-  }
-`;
-
 
 
 const cidadesBrasil = [
@@ -431,7 +378,7 @@ export function Home() {
               <input type="text" id="fullName" name="fullName" />
             </InputGroup>
             <InputGroup>
-              <MagicMotion><label htmlFor="city">Cidade</label></MagicMotion>
+              <label htmlFor="city">Cidade</label>
               <select id="city" name="city">
                 {cidadesBrasil.map((cidade, index) => (
                   <option key={index} value={cidade}>
@@ -462,10 +409,10 @@ export function Home() {
         </form>
       </Form>
       <Boxes>
-        <Box1/>
-        <Box2/>
-        <Box3/>
-        <Box4/>
+        <HomeCard path='page-1' imgUrl='/1.png'/>
+        <HomeCard path='page-2' imgUrl='/2.png'/>
+        <HomeCard path='page-3' imgUrl='/3.png'/>
+        <HomeCard path='minha-saude' imgUrl='/4.png'/>
       </Boxes>
     </Container>
   );
