@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import { Layout } from '@components/Layout';
-import { Home } from '@pages/Home';
+import {Home} from '@pages/Home';
 import { Page1 } from '@pages/Page1';
 import { Doenca } from '@/pages/Doenca';
 import { Page3 } from '@pages/Page3';

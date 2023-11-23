@@ -10,7 +10,7 @@ export const StyledButton = styled.button<Props>`
   position: relative;
   overflow: hidden;
   transition: background 400ms;
-  color: #fff;
+  color: black;
   background-color: ${({ theme, $customColor }) =>
     $customColor || theme.colors.primary.main};
   padding: 0.375rem 1rem;

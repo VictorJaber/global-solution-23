@@ -1,5 +1,4 @@
 import React from 'react';
-
 export function createRipple(event: React.MouseEvent<HTMLButtonElement>) {
   const button = event.currentTarget;
 
