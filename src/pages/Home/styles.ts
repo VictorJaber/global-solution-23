@@ -1,16 +1,82 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const focusIn = keyframes`
+ 0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+`;
+
+const slideFromLeft = keyframes`
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+const slideFromRight = keyframes`
+ 0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   max-width: 1280px;
   margin: 0 auto;
-  margin-top: 40px;
-  gap: 120px;
+  gap: 32px;
+
+  & ~ & {
+    margin-top: 32px;
+  }
+
+  & iframe {
+    width: 100%;
+    border-radius: 8px;
+  }
 
   @media (max-width: 900px) {
     flex-direction: column;
-    gap: 60px;
+  }
+`;
+
+export const HeroTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: ${focusIn} 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+
+  & h1 {
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: ${({ theme }) => theme.colors.text.primary};
+  }
+
+  & h2 {
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  & button {
+    align-self: start;
+    color: white;
+    text-transform: uppercase;
   }
 `;
 
@@ -29,6 +95,7 @@ export const Form = styled.div`
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   color: white;
   flex: 1;
+  animation: ${slideFromLeft} 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   @media (max-width: 900px) {
     order: 1;
@@ -86,6 +153,7 @@ export const Boxes = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
+  animation: ${slideFromRight} 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   @media (min-width: 425px) {
     grid-template-columns: 1fr 1fr;
