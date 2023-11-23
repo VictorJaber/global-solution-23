@@ -20,8 +20,11 @@ export default function InfoCard({ title, text, cards }) {
         <p>{text}</p>
       </StyledInfoCardsText>
       <StyledInfoCards>
-        {cards.map((card) => (
-          <StyledInfoCard onClick={() => setCurrentCard(card)}>
+        {cards.map((card, index) => (
+          <StyledInfoCard
+            key={card.title + index}
+            onClick={() => setCurrentCard(card)}
+          >
             <StyledInfoCardsImage src={card.image} alt={card.alt} />
             <span>{card.title}</span>
           </StyledInfoCard>
