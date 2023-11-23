@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const Main = styled.div`
         
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 30px;
     font-family: 'Roboto', sans-serif;
         
     
@@ -41,8 +41,28 @@ export const Main = styled.div`
         font-weight: normal;
         text-transform: uppercase;
       }
+
+    & h2 {
+      position: absolute;
+      inset: auto auto 30px 30px;
+      margin: 0;
+      transition: inset .3s .3s ease-out;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+    & h4 {
+      position: absolute;
+      inset: auto auto 30px 30px;
+      margin: 0;
+      transition: inset .3s .3s ease-out;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
       
-    & p, a {
+    & p, h4, h3, h6{
         position: absolute;
         opacity: 0;
         max-width: 80%;
@@ -50,21 +70,30 @@ export const Main = styled.div`
       }
       
     & p {
-        inset: auto auto 80px 30px;
+        inset: auto auto 130px 30px;
       }
       
-    & a {
-        inset: auto auto 40px 30px;
-        color: inherit;
+    & h4 {
+        inset: auto auto 180px 30px;
         text-decoration: none;
       }
+
+    & h3 {
+      inset: auto auto 90px 30px;
+      text-decoration: none;
+    }
+    
+    & h6 {
+      inset: auto auto 70px 30px;
+    }
+
       
       &:hover h2 {
         inset: auto auto 220px 30px;
         transition: inset .3s ease-out;
       }
       
-      &:hover p, &:hover a {
+      &:hover p, &:hover h4 , &:hover h3, &:hover h6{
         opacity: 1;
         transition: opacity .5s .1s ease-in;
       }
@@ -79,5 +108,9 @@ export const Main = styled.div`
     .material-symbols-outlined {
       vertical-align: middle;
     }
+    
+`
+
+export const Line = styled.div`
     
 `

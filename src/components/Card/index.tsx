@@ -1,8 +1,8 @@
 import { Main } from "./styles"
 
-type CardProps = {img: string; titulo: string; desc: string}
+type CardProps = {img: string; titulo: string; desc: string; desc2: string}
 
-function Card({img, titulo, desc}:CardProps){
+function Card({img, titulo, desc, desc2}:CardProps){
     return (    
     <Main>
         <div className = "card">
@@ -11,15 +11,14 @@ function Card({img, titulo, desc}:CardProps){
                 <h2>
                     {titulo}
                 </h2>
+                <h4>O que é?</h4>
                 <p>
                     {desc}
                 </p>
-                <a href="#" className="button">
-                        Find out more 
-                    <span className="material-symbols-outlined">
-                        arrow_right_alt
-                    </span>
-                 </a>
+                <h3>Como evitar?</h3>
+                <h6>
+                    {desc2}
+                </h6>
             </div>
         </div>
     </Main>
