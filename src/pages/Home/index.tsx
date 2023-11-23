@@ -1,6 +1,13 @@
-import {Button} from "@components/Button";
-import {HomeCard} from "@components/HomeCard";
-import {Container, Form, TitleForm, RowInputGroup, InputGroup, Boxes} from "@pages/Home/styles.ts";
+import { Button } from '@components/Button';
+import { HomeCard } from '@components/HomeCard';
+import {
+  Container,
+  Form,
+  TitleForm,
+  RowInputGroup,
+  InputGroup,
+  Boxes,
+} from '@pages/Home/styles.ts';
 const cidadesBrasil = [
   'São Paulo',
   'Rio de Janeiro',
@@ -282,12 +289,10 @@ const cidadesBrasil = [
   'Poços de Caldas',
 ];
 
-
-
 export function Home() {
   return (
     <Container>
-      <Form >
+      <Form>
         <form>
           <TitleForm>Fale Conosco</TitleForm>
           <RowInputGroup>
@@ -323,14 +328,22 @@ export function Home() {
               cols={50}
             ></textarea>
           </InputGroup>
-          <Button customColor={"white"} >Enviar</Button>
+          <Button customColor={'white'}>Enviar</Button>
         </form>
       </Form>
       <Boxes>
-        <HomeCard title='Mortalidade Infantil' path='page-1' imgUrl='/1.png'/>
-        <HomeCard title='Doenças Transmissíveis' path='page-2' imgUrl='/2.png'/>
-        <HomeCard title='Doenças Não Transmissíveis' path='page-3' imgUrl='/3.png'/>
-        <HomeCard title='Saúde Geral' path='minha-saude' imgUrl='/4.png'/>
+        <HomeCard title="Mortalidade Infantil" path="page-1" imgUrl="/1.png" />
+        <HomeCard
+          title="Doenças Transmissíveis"
+          path="page-2"
+          imgUrl="/2.png"
+        />
+        <HomeCard
+          title="Doenças Não Transmissíveis"
+          path="page-3"
+          imgUrl="/3.png"
+        />
+        <HomeCard title="Saúde Geral" path="minha-saude" imgUrl="/4.png" />
       </Boxes>
     </Container>
   );
