@@ -327,10 +327,10 @@ export function Home() {
         </form>
       </Form>
       <Boxes>
-        <HomeCard path='page-1' imgUrl='/1.png'/>
-        <HomeCard path='page-2' imgUrl='/2.png'/>
-        <HomeCard path='page-3' imgUrl='/3.png'/>
-        <HomeCard path='minha-saude' imgUrl='/4.png'/>
+        <HomeCard title='Mortalidade Infantil' path='page-1' imgUrl='/1.png'/>
+        <HomeCard title='Doenças Transmissíveis' path='page-2' imgUrl='/2.png'/>
+        <HomeCard title='Doenças Não Transmissíveis' path='page-3' imgUrl='/3.png'/>
+        <HomeCard title='Saúde Geral' path='minha-saude' imgUrl='/4.png'/>
       </Boxes>
     </Container>
   );

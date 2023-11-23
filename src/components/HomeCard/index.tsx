@@ -1,11 +1,15 @@
-import {StyledCard} from "@components/HomeCard/styles.ts";
+import {CardContainer, StyledCard, Txt} from "@components/HomeCard/styles.ts";
 
 interface HomeCardProps {
     path: string,
     imgUrl: string,
+    title: string,
 }
-export function HomeCard ({path, imgUrl}:HomeCardProps){
+export function HomeCard ({path, imgUrl, title}:HomeCardProps){
     return (
-        <StyledCard to = {path} $imgUrl = {imgUrl}/>
+        <CardContainer>
+            <StyledCard to = {path} $imgUrl = {imgUrl}/>
+            <Txt> {title} </Txt>
+        </CardContainer>
     )
 }
