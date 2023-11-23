@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -7,7 +7,8 @@ export const Container = styled.div`
   margin: 0 auto;
   margin-top: 40px;
   gap: 120px;
-  @media(max-width: 900px){
+
+  @media (max-width: 900px) {
     flex-direction: column;
     gap: 60px;
   }
@@ -28,10 +29,10 @@ export const Form = styled.div`
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   color: white;
   flex: 1;
-  @media(max-width: 900px){
+
+  @media (max-width: 900px) {
     order: 1;
   }
-  
 `;
 
 export const InputGroup = styled.div`
@@ -82,15 +83,19 @@ export const RowInputGroup = styled.div`
 `;
 
 export const Boxes = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  flex: 1;
-  @media(max-width: 900px){
-    display: grid;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+
+  @media (min-width: 425px) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 16px;
-    
+  }
+
+  @media (min-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: 1;
   }
 `;
