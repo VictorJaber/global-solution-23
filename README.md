@@ -54,8 +54,8 @@ A aplicação irá rodar no http://localhost:5173/.
 
 #### Bruno Perdigão Santos - RM98681)
 
-####  - )
+#### Bruno Fukumori - RM99486)
 
-####  - )
+#### Vinicius Messias dos Santos - RM550463 )
 
 
