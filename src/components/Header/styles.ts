@@ -1,24 +1,36 @@
 import styled from 'styled-components';
 
-export const StyledHeader = styled.header`
-  padding: 32px;
-  display: flex;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background-color: ${({ theme }) => theme.colors.primary.main};
-`;
-
 export const Logo = styled.img`
   max-width: 100px;
   display: block;
 `;
 
 export const StyledNav = styled.nav`
-  display: flex;
-  gap: 16px;
-  margin-inline: auto;
+  padding: 0;
+
+  & .container-fluid {
+    background-color: ${({ theme }) => theme.colors.primary.main};
+    padding: 32px;
+  }
+
+  .navbar-nav {
+    margin: auto;
+    gap: 16px;
+  }
+
+  .navbar-collapse {
+    @media (max-width: 991px) {
+      margin-top: 32px;
+    }
+  }
+
+  .navbar-toggler {
+    color: white;
+    border: none;
+    &:focus {
+      box-shadow: 0 0 0 2px white;
+    }
+  }
 
   & a {
     border-radius: 0.25rem;
