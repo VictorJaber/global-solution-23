@@ -1,11 +1,10 @@
-import { StyledContainer, StyledBanner } from "./styles";
+import { StyledBanner } from "./styles";
 
 export default function Banner({ imageSrc, alt }) {
   return (
-    <StyledContainer>
-      <StyledBanner>
-        <img src={imageSrc} alt={alt} />
-      </StyledBanner>
-    </StyledContainer>
+    <StyledBanner>
+      <img src={imageSrc} alt={alt} />
+      <h1>Doenças não transmissíveis</h1>
+    </StyledBanner>
   );
 }

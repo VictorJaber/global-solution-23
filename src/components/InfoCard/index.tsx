@@ -16,7 +16,7 @@ export default function InfoCard({ title, text, cards }) {
   return (
     <StyledInfoCardsContainer>
       <StyledInfoCardsText>
-        <h1>{title}</h1>
+        <h2>{title}</h2>
         <p>{text}</p>
       </StyledInfoCardsText>
       <StyledInfoCards>

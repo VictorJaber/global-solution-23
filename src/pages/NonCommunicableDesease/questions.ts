@@ -16,7 +16,8 @@ export const quiz = {
         "Consumo regular de frutas, vegetais e alimentos nutritivos",
       totalWrongAnswer:
         "Predominância de alimentos processados e com alto teor de gordura e açúcares",
-      explanation: "ddddddddddddd",
+      explanation:
+        "Consumo excessivo de alimentos ricos em gorduras saturadas, açúcares adicionados e sódio está associado a obesidade, diabetes tipo 2 e doenças cardiovasculares. Uma alimentação saudável, combinada com a prática regular de exercícios, ajuda a manter um peso corporal saudável. O excesso de peso é um fator de risco para diversas doenãs não transmissíveis, incluindo diabetes tipo 2, doenças cardíacas e certos tipos de câncer.",
     },
     {
       question:
@@ -29,7 +30,8 @@ export const quiz = {
       type: "MCQs",
       correctAnswer: "Pelo menos 150 minutos de exercício moderado",
       totalWrongAnswer: "Atividade física rara ou inexistente",
-      explanation: "ddddddddddddd",
+      explanation:
+        "A prática regular de atividades físicas desempenha um papel crucial na prevenção e no combate às Doenças Não Transmissíveis (DNTs), que incluem condições como doenças cardiovasculares, diabetes, câncer e doenças respiratórias crônicas. É importante ressaltar que a atividade física deve ser adaptada às capacidades individuais, e a orientação de profissionais de saúde deve ser buscada antes de iniciar qualquer programa de exercícios, especialmente para pessoas com condições médicas pré-existentes. A combinação de uma alimentação saudável e a prática regular de atividades físicas é uma abordagem eficaz na prevenção e no combate às DNTs.",
     },
     {
       question: "Quanto tempo você geralmente dedica ao sono por noite?",

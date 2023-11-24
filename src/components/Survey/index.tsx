@@ -2,8 +2,6 @@ import { useState } from "react";
 import "./style.css";
 
 export default function Survey({ title, text, quiz }) {
-  //   const [currentQuestion, setCurrentQuestion] = useState(questions[0]);
-
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [showResult, setShowResult] = useState(false);
@@ -62,81 +60,81 @@ export default function Survey({ title, text, quiz }) {
     }
   };
 
+  const refreshQuiz = () => {
+    setShowResult(false);
+    setActiveQuestion(0);
+    setSelectedAnswerIndex(null);
+    setSelectedChoices([]);
+  };
   const addLeadingZero = (number) => (number > 9 ? number : `0${number}`);
 
   return (
     <div className="quiz-container">
-      {!showResult ? (
-        <div>
+      <h2>{title}</h2>
+      <p>{text}</p>
+      <div className="quiz-body">
+        {!showResult ? (
           <div>
-            <span className="active-question-no">
-              {addLeadingZero(activeQuestion + 1)}
-            </span>
-            <span className="total-question">
-              /{addLeadingZero(questions.length)}
-            </span>
-          </div>
-          <h2>{question}</h2>
-          <ul>
-            {choices.map((answer, index) => (
-              <li
-                onClick={() => onAnswerSelected(answer, index)}
-                key={answer}
-                className={
-                  selectedAnswerIndex === index ? "selected-answer" : null
-                }
-              >
-                {answer}
-              </li>
-            ))}
-          </ul>
-          <div className="flex-right">
-            <button
-              onClick={onClickNext}
-              disabled={selectedAnswerIndex === null}
-            >
-              {activeQuestion === questions.length - 1 ? "Finish" : "Next"}
-            </button>
-          </div>
-        </div>
-      ) : (
-        <div className="result">
-          <h3>Result</h3>
-
-          {questions.map((question, index) => (
-            <div key={question.question}>
-              <span>{question.question}</span>
-              <p
-                style={{
-                  color: getAnswerTextColor(
-                    selectedChoices[index].answer,
-                    question.correctAnswer,
-                    question.totalWrongAnswer
-                  ),
-                }}
-              >
-                {selectedChoices[index].answer}
-              </p>
-              <p>{question.explanation}</p>
+            <div>
+              <span className="active-question-no">
+                {addLeadingZero(activeQuestion + 1)}
+              </span>
+              <span className="total-question">
+                /{addLeadingZero(questions.length)}
+              </span>
             </div>
-          ))}
-        </div>
-      )}
+            <h2>{question}</h2>
+            <ul>
+              {choices.map((answer, index) => (
+                <li
+                  onClick={() => onAnswerSelected(answer, index)}
+                  key={answer}
+                  className={
+                    selectedAnswerIndex === index ? "selected-answer" : null
+                  }
+                >
+                  {answer}
+                </li>
+              ))}
+            </ul>
+            <div className="flex-right">
+              <button
+                onClick={onClickNext}
+                disabled={selectedAnswerIndex === null}
+              >
+                {activeQuestion === questions.length - 1 ? "Finish" : "Next"}
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div className="result">
+            <h3>Resultado</h3>
+
+            {questions.map((question, index) => (
+              <div key={question.question}>
+                <span className="result-question">{question.question}</span>
+                <p
+                  className="result-explanation"
+                  style={{
+                    color: getAnswerTextColor(
+                      selectedChoices[index].answer,
+                      question.correctAnswer,
+                      question.totalWrongAnswer
+                    ),
+                  }}
+                >
+                  {selectedChoices[index].answer}
+                </p>
+                <p className="result-explanation">{question.explanation}</p>
+              </div>
+            ))}
+
+            <div className="flex-right">
+              <button onClick={refreshQuiz}>Refazer</button>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
-
-  //   return (
-  //     <>
-  //       <h1>{title}</h1>
-  //       <p>{text}</p>
-  //       <div>
-  //         <span>{currentQuestion.question}</span>
-  //         <ul>
-  //           {currentQuestion.alternativas.map((alternativa) => (
-  //             <li key={alternativa.text}>{alternativa.text}</li>
-  //           ))}
-  //         </ul>
-  //       </div>
-  //     </>
-  //   );
 }

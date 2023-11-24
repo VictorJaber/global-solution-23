@@ -1,4 +1,10 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const txtAnimation = keyframes`
+    0% {letter-spacing: -0.5em; opacity: 0;} 
+    40% {opacity: 0.6 }
+    100%{opacity: 1}
+`;
 
 export const StyledInfoCardsContainer = styled.div`
   display: flex;
@@ -6,7 +12,7 @@ export const StyledInfoCardsContainer = styled.div`
   align-items: center;
   gap: 40px;
   max-width: calc(100% - 80px);
-  margin: 0 auto;
+  margin: 40px auto;
 `;
 
 export const StyledInfoCardsText = styled.div`
@@ -14,9 +20,17 @@ export const StyledInfoCardsText = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  width: 50%;
 
-  h1 {
+  h2 {
     text-transform: uppercase;
+    font-style: normal;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+  }
+
+  p {
+    text-align: center;
   }
 `;
 
@@ -31,8 +45,10 @@ export const StyledInfoCard = styled.div`
   flex-direction: column;
   justify-content: center;
   position: relative;
+  transition: all 0.3s ease-in-out;
 
   & span {
+    color: #fff;
     position: absolute;
     text-align: center;
     left: 0;
@@ -45,22 +61,39 @@ export const StyledInfoCard = styled.div`
       opacity: 1;
     }
   }
+
+  &:hover {
+    transform: scale(1.05);
+
+   
+
+    &:before {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      content: '';
+      color: white;
+      border-radius: 10px;
+    }
 `;
 
 export const StyledInfoCardsImage = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 145px;
+  height: 145px;
+  border-radius: 10px;
 `;
 
 export const StyledInfoCardsMainCard = styled.div`
   display: flex;
   justify-content: center;
   gap: 56px;
+  transition: all 0.3s ease-in-out;
 `;
 
 export const StyledInfoCardsMainImage = styled.img`
-  width: 250px;
-  height: 250px;
+  width: 450px;
+  height: 450px;
+  border-radius: 10px;
 `;
 
 export const StyledInfoCardsMainInfo = styled.div`
@@ -69,4 +102,5 @@ export const StyledInfoCardsMainInfo = styled.div`
   justify-content: center;
   align-items: center;
   gap: 16px;
+  width: 40%;
 `;
