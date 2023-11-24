@@ -320,10 +320,9 @@ export function Home() {
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/oCIB-vB7wns?si=fIuE7O1G3hqdX52L"
+          src="https://www.youtube.com/embed/5JpbGs68CSM?si=C5y1bJ3iVVCTfUws"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
         ></iframe>
       </Container>
 
