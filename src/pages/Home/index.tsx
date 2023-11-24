@@ -392,24 +392,6 @@ export function Home() {
             <Button customColor="white">Enviar</Button>
           </form>
         </Form>
-        <Boxes>
-          <HomeCard
-            title="Mortalidade Infantil"
-            path="page-1"
-            imgUrl="/1.png"
-          />
-          <HomeCard
-            title="Doenças Transmissíveis"
-            path="page-2"
-            imgUrl="/2.png"
-          />
-          <HomeCard
-            title="Doenças Não Transmissíveis"
-            path="doencas-nao-transmissiveis"
-            imgUrl="/3.png"
-          />
-          <HomeCard title="Saúde Geral" path="minha-saude" imgUrl="/4.png" />
-        </Boxes>
       </Container>
     </>
   );
