@@ -335,7 +335,7 @@ export function Home() {
         <HomeCard title="Mortalidade Infantil" path="page-1" imgUrl="/1.png" />
         <HomeCard
           title="Doenças Transmissíveis"
-          path="page-2"
+          path="doencas"
           imgUrl="/2.png"
         />
         <HomeCard

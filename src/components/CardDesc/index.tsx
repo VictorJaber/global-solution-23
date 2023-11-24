@@ -9,7 +9,7 @@ function CardDesc({titulo, desc}:CardProps){
           <div>
             <article>
                 <h2>{titulo}</h2>
-              <p>{desc}</p>
+                <p>{desc}</p>
             </article>
           </div>
         </div>

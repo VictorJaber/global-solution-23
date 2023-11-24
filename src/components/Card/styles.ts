@@ -70,7 +70,7 @@ export const Main = styled.div`
       }
       
     & p {
-        inset: auto auto 130px 30px;
+        inset: 400px auto 130px 30px;
       }
       
     & h4 {
@@ -84,7 +84,7 @@ export const Main = styled.div`
     }
     
     & h6 {
-      inset: auto auto 70px 30px;
+      inset: 490px auto 70px 30px;
     }
 
       
