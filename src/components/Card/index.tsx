@@ -10,7 +10,7 @@ function Card({img, titulo, desc, desc2}:CardProps){
             <div className="card-content">
                 <h2>
                     {titulo}
-                </h2>
+                </h2>   
                 <h4>O que é?</h4>
                 <p>
                     {desc}
