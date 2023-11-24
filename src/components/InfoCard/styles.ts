@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledInfoCardsContainer = styled.div`
   display: flex;
@@ -7,6 +7,11 @@ export const StyledInfoCardsContainer = styled.div`
   gap: 40px;
   max-width: calc(100% - 80px);
   margin: 40px auto;
+
+  @media (max-width: 900px) {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 `;
 
 export const StyledInfoCardsText = styled.div`
@@ -21,10 +26,15 @@ export const StyledInfoCardsText = styled.div`
     font-style: normal;
     line-height: 150%;
     letter-spacing: 0.04em;
+    text-align: center;
   }
 
   p {
     text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
   }
 `;
 
@@ -32,6 +42,11 @@ export const StyledInfoCards = styled.div`
   display: flex;
   justify-content: center;
   gap: 32px;
+
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
 `;
 
 export const StyledInfoCard = styled.div`
@@ -64,7 +79,7 @@ export const StyledInfoCard = styled.div`
       position: absolute;
       inset: 0;
       background-color: rgba(0, 0, 0, 0.5);
-      content: '';
+      content: "";
       color: white;
       border-radius: 10px;
     }
@@ -75,6 +90,11 @@ export const StyledInfoCardsImage = styled.img`
   width: 145px;
   height: 145px;
   border-radius: 10px;
+
+  @media (max-width: 900px) {
+    width: 115px;
+    height: 115px;
+  }
 `;
 
 export const StyledInfoCardsMainCard = styled.div`
@@ -82,12 +102,20 @@ export const StyledInfoCardsMainCard = styled.div`
   justify-content: center;
   gap: 56px;
   transition: all 0.3s ease-in-out;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 export const StyledInfoCardsMainImage = styled.img`
   width: 450px;
   height: 450px;
   border-radius: 10px;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export const StyledInfoCardsMainInfo = styled.div`
@@ -97,4 +125,8 @@ export const StyledInfoCardsMainInfo = styled.div`
   align-items: center;
   gap: 16px;
   width: 40%;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
