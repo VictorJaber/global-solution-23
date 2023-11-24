@@ -1,20 +1,18 @@
-import MainQuiz from "@/components/MainQuiz";
+import MainQuiz from '@/components/MainQuiz';
 import {
   Container,
   ImageWithOverlay,
-  ImageTitle,
   Overlay,
   TitleH2,
   Text,
   SectionText,
   ImageText,
-} from "./styles";
+} from './styles';
 
 export function Maternity() {
   return (
     <Container>
       <ImageWithOverlay>
-        <ImageTitle src="/maeFilho.jpg" alt="" />
         <Overlay />
         <TitleH2>
           Jornada pela Vida: Reduzindo a Mortalidade Materna e Infantil

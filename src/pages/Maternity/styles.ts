@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -7,6 +7,10 @@ export const Container = styled.div`
   flex-direction: column;
   margin-inline: 0 auto;
   padding-inline: 10%;
+
+  @media (max-width: 900px) {
+    padding-inline: initial;
+  }
 `;
 
 export const ImageWithOverlay = styled.div`
@@ -14,12 +18,14 @@ export const ImageWithOverlay = styled.div`
   justify-content: center;
   display: flex;
   margin-bottom: 15px;
-`;
-
-export const ImageTitle = styled.img`
-  display: block;
+  height: 300px;
   width: 100%;
-  height: auto;
+  background: url('/maeFilho.jpg') center center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
 `;
 
 export const Overlay = styled.div`
@@ -28,17 +34,15 @@ export const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba( 0, 0, 0, 0.5 ); /* Cor de fundo acizentada com transparência */
+  background-color: rgba(0, 0, 0, 0.5);
 `;
 
 export const TitleH2 = styled.h2`
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
   font-weight: bold;
   line-height: 150%;
+  z-index: 1;
+  text-align: center;
 `;
 
 export const Text = styled.p`
@@ -49,13 +53,22 @@ export const Text = styled.p`
 `;
 
 export const SectionText = styled.section`
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 15px;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 export const ImageText = styled.img`
-    max-height: 300px;
-    max-width: 40%;
-`
+  max-height: 300px;
+  max-width: 40%;
+  object-fit: cover;
+
+  @media (max-width: 900px) {
+    max-width: 100%;
+  }
+`;

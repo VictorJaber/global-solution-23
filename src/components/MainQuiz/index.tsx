@@ -1,66 +1,53 @@
-import { useState, useEffect, useCallback } from "react";
-import { QuizDataItem, quizData } from "./quizData";
-import { Questions, Quiz, Result, ResultTitle } from "./styles";
+import { useEffect, useState } from 'react';
+
+import { QuizDataItem, quizData } from './quizData';
+import { Questions, Result } from './styles';
 
 export default function MainQuiz() {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [myAnswer, setMyAnswer] = useState<string | null>(null);
-  const [options, setOptions] = useState<string[]>([]);
   const [score, setScore] = useState(0);
-  const [disabled, setDisabled] = useState(true);
+  const [disabled, setDisabled] = useState(false);
   const [isEnd, setIsEnd] = useState(false);
 
-  const loadQuizData = useCallback(() => {
-    setOptions(quizData[currentQuestion].options);
-  }, [currentQuestion]);
-
-  useEffect(() => {
-    loadQuizData();
-  }, [loadQuizData]);
+  const [questionIndex, setQuestionIndex] = useState(0);
 
   const nextQuestionHandler = () => {
-    const answer = quizData[currentQuestion].answer;
-
-    if (myAnswer === answer) {
-      setScore(score + 1);
+    if (questionIndex === quizData.length - 1) {
+      setIsEnd(true);
+      return;
     }
-
-    setCurrentQuestion(currentQuestion + 1);
+    setQuestionIndex((value) => value + 1);
   };
-
-  useEffect(() => {
-    setDisabled(true);
-    setOptions(quizData[currentQuestion].options);
-    setMyAnswer(null);
-  }, [currentQuestion]);
 
   const checkAnswer = (answer: string) => {
     setMyAnswer(answer);
     setDisabled(false);
+    nextQuestionHandler();
   };
 
-  const finishHandler = () => {
-    if (currentQuestion === quizData.length - 1) {
-      setIsEnd(true);
-    }
+  useEffect(() => {
+    const { answer } = quizData[questionIndex];
 
-    if (myAnswer === quizData[currentQuestion].answer) {
-      setScore(score + 1);
+    if (myAnswer === answer) {
+      setScore((value) => value + 1);
     }
-  };
+  }, [myAnswer, questionIndex]);
 
   return (
-    <Quiz>
+    <div className="card shadow rounded border-0 p-5">
       {isEnd ? (
         <Result>
-          <ResultTitle>
-            Fim de Jogo, sua pontuação final é {score} pontos{" "}
-          </ResultTitle>
+          <h2 className="text-primary mb-4">
+            Fim de jogo, sua pontuação final é{' '}
+            <span className="fw-bolder">{score} pontos </span>!
+          </h2>
           <div>
-            As respostas corretas para as perguntas são:
-            <ul>
+            <p className="text-secondary fw-bold fs-5 mb-2">
+              As respostas corretas para as perguntas são:
+            </p>
+            <ul className="list-group list-group-flush">
               {quizData.map((item: QuizDataItem, index: number) => (
-                <li className="ui floating message options" key={index}>
+                <li className="list-group-item" key={index}>
                   {item.answer}
                 </li>
               ))}
@@ -69,37 +56,28 @@ export default function MainQuiz() {
         </Result>
       ) : (
         <Questions>
-          <h2>{quizData[currentQuestion].question} </h2>
-          <span>{`Questão ${currentQuestion + 1} de ${quizData.length}`}</span>
+          <h2 className="text-secondary-emphasis mb-4">
+            {quizData[questionIndex].question}{' '}
+          </h2>
+          <p className="text-secondary fw-bold fs-5 mb-2">
+            {`Questão ${questionIndex + 1} de ${quizData.length}`}:
+          </p>
           <div>
-            {options.map((option, index) => (
-              <p
+            {quizData[questionIndex].options.map((option, index) => (
+              <button
                 key={index}
-                className={`ui floating message options ${
-                  myAnswer === option ? "selected" : ""
+                disabled={disabled}
+                className={`btn btn-outline-primary ${
+                  myAnswer === option ? 'selected' : ''
                 }`}
                 onClick={() => checkAnswer(option)}
               >
                 {option}
-              </p>
+              </button>
             ))}
           </div>
-          {currentQuestion < quizData.length - 1 && (
-            <button
-              className="ui inverted button"
-              disabled={disabled}
-              onClick={nextQuestionHandler}
-            >
-              Next
-            </button>
-          )}
-          {currentQuestion === quizData.length - 1 && (
-            <button className="ui inverted button" onClick={finishHandler}>
-              Finish
-            </button>
-          )}
         </Questions>
       )}
-    </Quiz>
+    </div>
   );
 }
