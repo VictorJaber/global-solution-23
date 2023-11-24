@@ -28,8 +28,8 @@ export function Header() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/page-1">
-                Page 1
+              <NavLink className="nav-link" to="/maternidade">
+                Maternidade
               </NavLink>
             </li>
             <li className="nav-item">

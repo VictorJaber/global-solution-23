@@ -39,6 +39,7 @@ export const Container = styled.div`
   max-width: 1280px;
   margin: 0 auto;
   gap: 32px;
+  padding-top: 40px;
 
   & ~ & {
     margin-top: 32px;
@@ -95,7 +96,6 @@ export const Form = styled.div`
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   color: white;
   flex: 1;
-  animation: ${slideFromLeft} 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   @media (max-width: 900px) {
     order: 1;
@@ -165,5 +165,37 @@ export const Boxes = styled.div`
     flex-direction: column;
     text-align: center;
     flex: 1;
+  }
+`;
+
+export const TeamContainer = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  animation: ${slideFromLeft} 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  margin-bottom: 32px;
+  margin-top: 50px;
+
+  h2 {
+    font-size: 2rem;
+    padding: 0.5em 2em;
+    color: black;
+    font-weight: 600;
+    border-radius: 16px;
+    margin-bottom: 3em;
+    position: absolute;
+    top: 25%;
+    transform: translateY(50%);
+
+    @media (min-width: 900px) {
+      transform: translateY(-50%);
+    }
+  }
+
+  @media (min-width: 900px) {
+    margin-bottom: initial;
   }
 `;

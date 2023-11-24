@@ -1,10 +1,4 @@
-import styled, { keyframes } from "styled-components";
-
-const txtAnimation = keyframes`
-    0% {letter-spacing: -0.5em; opacity: 0;} 
-    40% {opacity: 0.6 }
-    100%{opacity: 1}
-`;
+import styled from 'styled-components';
 
 export const StyledInfoCardsContainer = styled.div`
   display: flex;
@@ -46,6 +40,7 @@ export const StyledInfoCard = styled.div`
   justify-content: center;
   position: relative;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 
   & span {
     color: #fff;
@@ -65,8 +60,6 @@ export const StyledInfoCard = styled.div`
   &:hover {
     transform: scale(1.05);
 
-   
-
     &:before {
       position: absolute;
       inset: 0;
@@ -75,6 +68,7 @@ export const StyledInfoCard = styled.div`
       color: white;
       border-radius: 10px;
     }
+  }
 `;
 
 export const StyledInfoCardsImage = styled.img`
