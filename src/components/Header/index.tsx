@@ -33,9 +33,9 @@ export function Header() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/page-2">
-                Page 2
-              </NavLink>
+            <NavLink className="nav-link" to="/doencas">
+              Doenças Transmissiveis
+            </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/doencas-nao-transmissiveis">
