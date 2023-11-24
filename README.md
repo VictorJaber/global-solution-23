@@ -61,4 +61,4 @@ A aplicação irá rodar em http://localhost:5173/.
 
 #### Bruno Fukumori - RM99486
 
-#### -
+#### Vinicius Messias dos Santos - RM550463
