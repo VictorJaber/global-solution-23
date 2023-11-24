@@ -18,5 +18,9 @@ export const StyledBanner = styled.div`
     color: white;
     text-transform: uppercase;
     font-size: 56px;
+
+    @media (max-width: 900px) {
+      font-size: 20px;
+    }
   }
 `;

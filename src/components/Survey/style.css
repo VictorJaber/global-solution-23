@@ -20,6 +20,11 @@
   line-height: 150%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.quiz-container > p {
+  text-align: center;
 }
 
 .quiz-body {
@@ -121,4 +126,11 @@
 .result p span {
   color: #800080;
   font-size: 22px;
+}
+
+@media (max-width: 900px) {
+  .quiz-body {
+    max-width: 350px;
+    max-height: 600px;
+  }
 }

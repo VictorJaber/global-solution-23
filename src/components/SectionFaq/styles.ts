@@ -16,8 +16,21 @@ export const StyledSection = styled.div`
     margin-bottom: 16px;
   }
 
+  > p {
+    text-align: center;
+  }
+
   img {
     width: 30%;
+
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    max-width: 100%;
+    margin: 0 auto;
   }
 `;
 
@@ -30,5 +43,13 @@ export const StyledFaq = styled.div`
 
   .Faq {
     width: 40%;
+
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column-reverse;
   }
 `;
