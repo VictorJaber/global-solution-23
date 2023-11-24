@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import { decodeCrypto } from '@/utils/decodeCrypto';
 import { Button } from '@components/Button';
 import { HomeCard } from '@components/HomeCard';
@@ -9,8 +11,9 @@ import {
   InputGroup,
   Boxes,
   HeroTextContainer,
+  TeamContainer,
 } from '@pages/Home/styles.ts';
-import { useEffect } from 'react';
+import { Team } from '@/components/Team';
 const cidadesBrasil = [
   'São Paulo',
   'Rio de Janeiro',
@@ -325,6 +328,31 @@ export function Home() {
       </Container>
 
       <Container>
+        <TeamContainer>
+          <h2>Time</h2>
+          <Team />
+        </TeamContainer>
+        <Boxes>
+          <HomeCard
+            title="Mortalidade Infantil"
+            path="page-1"
+            imgUrl="/1.png"
+          />
+          <HomeCard
+            title="Doenças Transmissíveis"
+            path="page-2"
+            imgUrl="/2.png"
+          />
+          <HomeCard
+            title="Doenças Não Transmissíveis"
+            path="page-3"
+            imgUrl="/3.png"
+          />
+          <HomeCard title="Saúde Geral" path="minha-saude" imgUrl="/4.png" />
+        </Boxes>
+      </Container>
+
+      <Container>
         <Form>
           <form>
             <TitleForm>Fale Conosco</TitleForm>
@@ -364,24 +392,6 @@ export function Home() {
             <Button customColor="white">Enviar</Button>
           </form>
         </Form>
-        <Boxes>
-          <HomeCard
-            title="Mortalidade Infantil"
-            path="page-1"
-            imgUrl="/1.png"
-          />
-          <HomeCard
-            title="Doenças Transmissíveis"
-            path="page-2"
-            imgUrl="/2.png"
-          />
-          <HomeCard
-            title="Doenças Não Transmissíveis"
-            path="page-3"
-            imgUrl="/3.png"
-          />
-          <HomeCard title="Saúde Geral" path="minha-saude" imgUrl="/4.png" />
-        </Boxes>
       </Container>
     </>
   );
