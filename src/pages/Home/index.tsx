@@ -1,99 +1,13 @@
-import styled from 'styled-components';
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  max-width: 1280px;
-  margin: 0 auto;
-  margin-top: 40px;
-`;
-
-const Form = styled.div`
-  padding: 20px;
-  background-color: #d9d9d9;
-  text-align: left;
-  width: 30%;
-  margin-right: 20%;
-  border-radius: 15px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-`;
-
-const InputGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-
-  label {
-    margin-bottom: 5px;
-    font-size: 14px;
-  }
-
-  select,
-  input,
-  textarea {
-    width: 100%;
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-size: 14px;
-    transition: border-color 0.3s ease-in-out;
-  }
-
-  textarea {
-    resize: none;
-  }
-
-  select:focus,
-  select:active,
-  input:focus,
-  input:active,
-  textarea:focus,
-  textarea:active {
-    outline: none;
-    border-color: #0e79b2;
-    transition: border-color 0.3s ease-in-out;
-  }
-`;
-
-const RowInputGroup = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  ${InputGroup} {
-    width: 48%;
-  }
-`;
-
-const Boxes = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 40%;
-`;
-
-const Box = styled.div`
-  height: 100px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  background-color: #d9d9d9;
-  padding: 10px 80px;
-`;
-
-const Button = styled.button`
-  padding: 10px 20px;
-  border-radius: 4px;
-  background-color: #0e79b2;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-
-  &:hover {
-    background-color: #085a8c;
-  }
-`;
-
+import { Button } from '@components/Button';
+import { HomeCard } from '@components/HomeCard';
+import {
+  Container,
+  Form,
+  TitleForm,
+  RowInputGroup,
+  InputGroup,
+  Boxes,
+} from '@pages/Home/styles.ts';
 const cidadesBrasil = [
   'São Paulo',
   'Rio de Janeiro',
@@ -375,13 +289,6 @@ const cidadesBrasil = [
   'Poços de Caldas',
 ];
 
-const TitleForm = styled.h2`
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: normal;
-`;
-
 export function Home() {
   return (
     <Container>
@@ -421,14 +328,22 @@ export function Home() {
               cols={50}
             ></textarea>
           </InputGroup>
-          <Button type="submit">Enviar</Button>
+          <Button customColor={'white'}>Enviar</Button>
         </form>
       </Form>
       <Boxes>
-        <Box>Página 1</Box>
-        <Box>Página 2</Box>
-        <Box>Página 3</Box>
-        <Box>Página 4</Box>
+        <HomeCard title="Mortalidade Infantil" path="page-1" imgUrl="/1.png" />
+        <HomeCard
+          title="Doenças Transmissíveis"
+          path="page-2"
+          imgUrl="/2.png"
+        />
+        <HomeCard
+          title="Doenças Não Transmissíveis"
+          path="page-3"
+          imgUrl="/3.png"
+        />
+        <HomeCard title="Saúde Geral" path="minha-saude" imgUrl="/4.png" />
       </Boxes>
     </Container>
   );
