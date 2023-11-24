@@ -11,6 +11,7 @@ export default function NonCommunicableDesease() {
     <>
       <Banner
         imageSrc="https://img.freepik.com/fotos-gratis/vista-superior-do-coracao-dia-mundial-com-espaco-de-copia_23-2148610468.jpg?w=1800&t=st=1700775924~exp=1700776524~hmac=d5d587f4cffdd986fbcfffb730345f2984722ceb000bdfe0e2463335ba7aa1f1"
+        imageSrcMobile="https://images.pexels.com/photos/6941883/pexels-photo-6941883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         alt="Banner"
       />
       <InfoCard
