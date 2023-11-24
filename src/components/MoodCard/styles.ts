@@ -46,6 +46,7 @@ export const MoodWrapper = styled.div`
   align-self: center;
   gap: 16px;
   justify-content: center;
+  flex-wrap: wrap;
 `;
 
 const pulsate = keyframes`

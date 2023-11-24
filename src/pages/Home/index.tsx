@@ -1,3 +1,4 @@
+import { decodeCrypto } from "@/utils/decodeCrypto";
 import { Button } from "@components/Button";
 import { HomeCard } from "@components/HomeCard";
 import {
@@ -7,7 +8,9 @@ import {
   RowInputGroup,
   InputGroup,
   Boxes,
+  HeroTextContainer,
 } from "@pages/Home/styles.ts";
+import { useEffect } from "react";
 const cidadesBrasil = [
   "São Paulo",
   "Rio de Janeiro",
@@ -290,61 +293,96 @@ const cidadesBrasil = [
 ];
 
 export function Home() {
+  useEffect(() => {
+    decodeCrypto();
+  }, []);
+
   return (
-    <Container>
-      <Form>
-        <form>
-          <TitleForm>Fale Conosco</TitleForm>
-          <RowInputGroup>
+    <>
+      <Container>
+        <HeroTextContainer>
+          <h1>Global Solution 2023</h1>
+          <h2 id="decode" data-value="Tech Care & Hapvida">
+            Tech Care & Hapvida
+          </h2>
+          <a
+            href="https://www.fiap.com.br/graduacao/global-solution/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button size="lg">Saiba mais</Button>
+          </a>
+        </HeroTextContainer>
+
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/oCIB-vB7wns?si=fIuE7O1G3hqdX52L"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      </Container>
+
+      <Container>
+        <Form>
+          <form>
+            <TitleForm>Fale Conosco</TitleForm>
+            <RowInputGroup>
+              <InputGroup>
+                <label htmlFor="fullName">Nome Completo</label>
+                <input type="text" id="fullName" name="fullName" />
+              </InputGroup>
+              <InputGroup>
+                <label htmlFor="city">Cidade</label>
+                <select id="city" name="city">
+                  {cidadesBrasil.map((cidade, index) => (
+                    <option key={index} value={cidade}>
+                      {cidade}
+                    </option>
+                  ))}
+                </select>
+              </InputGroup>
+            </RowInputGroup>
             <InputGroup>
-              <label htmlFor="fullName">Nome Completo</label>
-              <input type="text" id="fullName" name="fullName" />
+              <label htmlFor="email">Email</label>
+              <input type="text" id="email" name="email" />
             </InputGroup>
             <InputGroup>
-              <label htmlFor="city">Cidade</label>
-              <select id="city" name="city">
-                {cidadesBrasil.map((cidade, index) => (
-                  <option key={index} value={cidade}>
-                    {cidade}
-                  </option>
-                ))}
-              </select>
+              <label htmlFor="subject">Assunto</label>
+              <input type="text" id="subject" name="subject" />
             </InputGroup>
-          </RowInputGroup>
-          <InputGroup>
-            <label htmlFor="email">Email</label>
-            <input type="text" id="email" name="email" />
-          </InputGroup>
-          <InputGroup>
-            <label htmlFor="subject">Assunto</label>
-            <input type="text" id="subject" name="subject" />
-          </InputGroup>
-          <InputGroup>
-            <label htmlFor="description">Descrição do Assunto</label>
-            <textarea
-              id="description"
-              name="description"
-              rows={4}
-              cols={50}
-            ></textarea>
-          </InputGroup>
-          <Button customColor={"white"}>Enviar</Button>
-        </form>
-      </Form>
-      <Boxes>
-        <HomeCard title="Mortalidade Infantil" path="page-1" imgUrl="/1.png" />
-        <HomeCard
-          title="Doenças Transmissíveis"
-          path="page-2"
-          imgUrl="/2.png"
-        />
-        <HomeCard
-          title="Doenças Não Transmissíveis"
-          path="doencas-nao-transmissiveis"
-          imgUrl="/3.png"
-        />
-        <HomeCard title="Saúde Geral" path="minha-saude" imgUrl="/4.png" />
-      </Boxes>
-    </Container>
+            <InputGroup>
+              <label htmlFor="description">Descrição do Assunto</label>
+              <textarea
+                id="description"
+                name="description"
+                rows={4}
+                cols={50}
+              ></textarea>
+            </InputGroup>
+            <Button customColor="white">Enviar</Button>
+          </form>
+        </Form>
+        <Boxes>
+          <HomeCard
+            title="Mortalidade Infantil"
+            path="page-1"
+            imgUrl="/1.png"
+          />
+          <HomeCard
+            title="Doenças Transmissíveis"
+            path="page-2"
+            imgUrl="/2.png"
+          />
+          <HomeCard
+            title="Doenças Não Transmissíveis"
+            path="doencas-nao-transmissiveis"
+            imgUrl="/3.png"
+          />
+          <HomeCard title="Saúde Geral" path="minha-saude" imgUrl="/4.png" />
+        </Boxes>
+      </Container>
+    </>
   );
 }
