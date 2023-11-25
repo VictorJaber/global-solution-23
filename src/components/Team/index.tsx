@@ -11,6 +11,7 @@ export function Team() {
             rel="noopener noreferrer"
           >
             <img src="/bruno-f.jpg" alt="" />
+            <span>Bruno Fukumori</span>
           </Avatar>
           <Avatar
             href="https://www.linkedin.com/in/viniciusm-santos"
@@ -18,6 +19,7 @@ export function Team() {
             rel="noopener noreferrer"
           >
             <img src="/vinicius.jpg" alt="" />
+            <span>Vinicius Santos</span>
           </Avatar>
           <Avatar
             href="https://www.linkedin.com/in/brunoandradel-a-dev/"
@@ -25,6 +27,7 @@ export function Team() {
             rel="noopener noreferrer"
           >
             <img src="/bruno-a.png" alt="" />
+            <span>Bruno Araujo</span>
           </Avatar>
           <Avatar
             href="https://www.linkedin.com/in/brunoperdigaosantos/"
@@ -32,6 +35,7 @@ export function Team() {
             rel="noopener noreferrer"
           >
             <img src="/bruno-p.png" alt="" />
+            <span>Bruno Perdigão</span>
           </Avatar>
           <Avatar
             href="https://www.linkedin.com/in/victorjaber/"
@@ -39,6 +43,7 @@ export function Team() {
             rel="noopener noreferrer"
           >
             <img src="/victor.png" alt="" />
+            <span>Victor Jaber</span>
           </Avatar>
         </CircleRotate>
       </Circle>

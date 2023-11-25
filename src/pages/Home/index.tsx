@@ -334,17 +334,17 @@ export function Home() {
         <Boxes>
           <HomeCard
             title="Mortalidade Infantil"
-            path="page-1"
+            path="mortalidade-infantil"
             imgUrl="/1.png"
           />
           <HomeCard
             title="Doenças Transmissíveis"
-            path="page-2"
+            path="doencas-transmissiveis"
             imgUrl="/2.png"
           />
           <HomeCard
             title="Doenças Não Transmissíveis"
-            path="page-3"
+            path="doencas-nao-transmissiveis"
             imgUrl="/3.png"
           />
           <HomeCard title="Saúde Geral" path="minha-saude" imgUrl="/4.png" />

@@ -176,7 +176,7 @@ export const TeamContainer = styled.div`
   position: relative;
   flex-direction: column;
   animation: ${slideFromLeft} 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  margin-bottom: 32px;
+  margin-bottom: 80px;
   margin-top: 50px;
 
   h2 {
