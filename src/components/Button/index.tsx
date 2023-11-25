@@ -17,11 +17,11 @@ export function Button({
 }: ButtonProps) {
   return (
     <StyledButton
-      {...rest}
       $size={size}
       $variant={variant}
       $customColor={customColor}
       onClick={createRipple}
+      {...rest}
     >
       {children}
     </StyledButton>

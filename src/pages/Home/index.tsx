@@ -317,7 +317,13 @@ export function Home() {
           </a>
         </HeroTextContainer>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/5JpbGs68CSM?si=C5y1bJ3iVVCTfUws" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/5JpbGs68CSM?si=C5y1bJ3iVVCTfUws"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        ></iframe>
       </Container>
 
       <Container>
@@ -325,6 +331,24 @@ export function Home() {
           <h2>Time</h2>
           <Team />
         </TeamContainer>
+        <Boxes>
+          <HomeCard
+            title="Mortalidade Infantil"
+            path="mortalidade-infantil"
+            imgUrl="/1.png"
+          />
+          <HomeCard
+            title="Doenças Transmissíveis"
+            path="doencas-transmissiveis"
+            imgUrl="/2.png"
+          />
+          <HomeCard
+            title="Doenças Não Transmissíveis"
+            path="doencas-nao-transmissiveis"
+            imgUrl="/3.png"
+          />
+          <HomeCard title="Saúde Geral" path="minha-saude" imgUrl="/4.png" />
+        </Boxes>
       </Container>
 
       <Container>
@@ -367,24 +391,6 @@ export function Home() {
             <Button customColor="white">Enviar</Button>
           </form>
         </Form>
-        <Boxes>
-          <HomeCard
-            title="Mortalidade Infantil"
-            path="/maternidade"
-            imgUrl="/1.png"
-          />
-        <HomeCard
-          title="Doenças Transmissíveis"
-          path="doencas"
-          imgUrl="/2.png"
-        />
-          <HomeCard
-            title="Doenças Não Transmissíveis"
-            path="doencas-nao-transmissiveis"
-            imgUrl="/3.png"
-          />
-          <HomeCard title="Saúde Geral" path="minha-saude" imgUrl="/4.png" />
-        </Boxes>
       </Container>
     </>
   );

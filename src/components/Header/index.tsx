@@ -1,8 +1,8 @@
-import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-import { Logo, StyledNav } from "./styles";
+import { Logo, StyledNav } from './styles';
 
 export function Header() {
   return (
@@ -28,14 +28,14 @@ export function Header() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/maternidade">
-                Maternidade
+              <NavLink className="nav-link" to="/mortalidade-infantil">
+                Mortalidade Infantil
               </NavLink>
             </li>
             <li className="nav-item">
-            <NavLink className="nav-link" to="/doencas">
-              Doenças Transmissiveis
-            </NavLink>
+              <NavLink className="nav-link" to="/doencas-transmissiveis">
+                Doenças Transmissiveis
+              </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/doencas-nao-transmissiveis">

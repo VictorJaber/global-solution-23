@@ -105,5 +105,12 @@ export const Avatar = styled.a`
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
     border-radius: 50%;
     animation: ${scale} 1s linear infinite alternate;
+    position: relative;
+  }
+
+  & > span {
+    position: absolute;
+    top: 103px;
+    left: 25px;
   }
 `;
