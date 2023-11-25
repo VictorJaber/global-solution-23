@@ -49,7 +49,7 @@ A aplicação irá rodar em http://localhost:5173/.
 ## Materiais
 
 - [Repositório Front-end Original](https://github.com/VictorJaber/global-solution-23)
-- [Vídeo Pitch]()
+- [Vídeo Pitch](https://youtu.be/5JpbGs68CSM?si=GSUtSg1wXO1RjwKG)
 
 ## 🧑‍🤝‍🧑 Equipe
 
